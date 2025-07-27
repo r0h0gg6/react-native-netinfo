@@ -9,7 +9,7 @@ buildscript {
     }
 
     dependencies {
-      classpath("com.android.tools.build:gradle:7.4.2")
+      classpath("com.android.tools.build:gradle:8.7.2")
     }
   }
 }
@@ -31,15 +31,11 @@ apply plugin: 'com.android.library'
 android {
   compileSdkVersion getExtOrIntegerDefault('compileSdkVersion')
 
-  def agpVersion = com.android.Version.ANDROID_GRADLE_PLUGIN_VERSION
-  // Check AGP version for backward compatibility reasons
-  if (agpVersion.tokenize('.')[0].toInteger() >= 7) {
-    namespace = "com.reactnativecommunity.netinfo"
-  }
+  namespace = "com.reactnativecommunity.netinfo"
 
   compileOptions {
-      sourceCompatibility JavaVersion.VERSION_1_8
-      targetCompatibility JavaVersion.VERSION_1_8
+      sourceCompatibility JavaVersion.VERSION_17
+      targetCompatibility JavaVersion.VERSION_17
   }
 
   defaultConfig {
