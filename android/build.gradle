@@ -44,6 +44,11 @@ android {
   }
   lintOptions{
     abortOnError false
+    disable 'deprecation'
+  }
+  
+  compileOptions {
+    compilerArgs << "-Xlint:-deprecation"
   }
 }
 
